@@ -1,0 +1,50 @@
+<!DOCTYPE html>   <!-- tarayıcıya “Bu bir HTML5 sayfasıdır” demek. Standart ve gereklidir. -->
+<html lang="tr">
+<head>  <!-- kullanıcıya gösterilmeyen gizli kod, arka plan ayarları-->
+    <meta charset="UTF-8">  <!-- türkçe karakterlerin düzgün gösterilmesi için-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!--sayfanın mobil ile uyumlu olmasını sağlar-->
+    <title>Brain Tumor Classifier</title>  <!--sekmedeki isim -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">  <!--sayfanın bir css dosyası ile görselleştirilmesini sağlar, bu kısmı flask yönetir.-->
+</head>
+
+
+<!-- Sayfanın kullanıcıya gösterildiği kısmı -->
+<body>
+    <div class="container">  <!-- sayfanın tüm içeriği burada yer alacak (kutu)-->
+        <h1>Brain Tumor Classifier</h1>
+
+
+
+        <!-- Yükleme Bölümü -->
+        <div class="upload-section"> <!--seçim alanı-->  <!-- class yardımı ile girişteki kutulara şekli verilir.-->
+            <div class="upload-box">  <!-- seçim kutusu-->
+                <form id="image-form" enctype="multipart/form-data"> <!--form kullanıcının veri göndermesi için,
+                 id js in bulabilmesi için, enctype özel ayar resim formu gideceği için-->
+                    <input type="file" name="image" id="image" accept="image/*">  <!-- input kullanıcıdan veri alır, type dosya seçme kutusu, verinin adı, js nasıl ulaşacak,
+                    sadece resim tipi kabul edilecek-->
+                    <button type="submit">Sınıflandır</button>  <!--tipi veri gönderme olan buton-->
+                </form>
+            </div>
+        </div>
+
+
+        
+        <!-- Sonuç Bölümü -->
+        <div class="result-section" id="result-section" style="display: none;"> <!-- resim yüklendiğinde görünecek sonuç alanı-->
+            <img id="image-preview" src="" alt="Görüntü Önizlemesi"/>  <!--img yüklenen resmin önizlenmesini sağlar, görüntü yüklenemezse yazı-->
+            <div>
+                <span class="prediction-label">Tahmin:</span>  <!-- minik metin kutusu-->
+                <div class="result-box">  <!--sonuç kutusu -->
+                    <span id="result"></span> <!-- sonuç -->
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script> <!--js dosyası bağlanır -->
+</body>
+</html>
+
+
+

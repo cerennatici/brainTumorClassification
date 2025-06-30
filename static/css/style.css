@@ -1,0 +1,92 @@
+body {
+    font-family: 'Arial', sans-serif;  /* Sayfa genelinde Arial font kullanılır */
+    background-color: #dcdcdc;         /* Arka plan açık gri */
+    text-align: center;                /* Tüm yazılar ortalanır */
+    padding: 20px;                     /* İç boşluk eklenir */
+}
+.container {
+    max-width: 600px;                    /* En fazla 600px genişlik */
+    margin: auto;                        /* Ortalanır */
+    background: white;                  /* Beyaz arka plan */
+    padding: 20px;                      /* İç boşluk */
+    border-radius: 12px;                /* Köşeler yuvarlatılır */
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1); /* Gölge efekti */
+}
+
+h1 {   /* baslık*/
+    color: #4CAF50;          /* Yeşil renk */
+    font-size: 28px;         /* Yazı boyutu */
+    margin-bottom: 25px;     /* Alt boşluk */
+}
+
+/* Dosya seçim alanı grubu */
+.upload-section {
+    margin-bottom: 30px;  /* Alt boşluk */
+}
+
+.upload-box {
+    display: flex;                    /* İçerikler yatay hizalanır */
+    justify-content: center;         /* Ortalanır */
+    align-items: center;             /* Dikey ortalanır */
+    gap: 10px;                       /* Öğeler arası boşluk */
+    margin: 0 auto 20px auto;        /* Ortalanma ve alt boşluk */
+    border: 2px solid #4CAF50;       /* Yeşil çerçeve */
+    padding: 10px;                   /* İç boşluk */
+    border-radius: 8px;              /* Köşe yuvarlama */
+    max-width: 500px;                /* Maksimum genişlik */
+}
+button {
+    background-color: #4CAF50;  /* Yeşil arka plan */
+    color: white;               /* Beyaz yazı */
+    border: none;               /* Çerçeve yok */
+    padding: 10px 20px;         /* İç boşluk */
+    border-radius: 8px;         /* Köşe yuvarlama */
+    cursor: pointer;            /* El işareti olur */
+    font-size: 16px;            /* Yazı boyutu */
+    transition: 0.3s;           /* Hover geçişi yumuşak */
+}
+
+button:hover {
+    background-color: #45a049; /* Hover sırasında renk değişir */
+}
+
+/* Sonuç gösterme grubu */
+.result-section {
+    background-color: #f9f9f9;      /* Açık gri arka plan */
+    border-radius: 12px;            /* Köşe yuvarlama */
+    padding: 20px;                  /* İç boşluk */
+    margin-top: 20px;               /* Üst boşluk */
+    border: 1px solid #e0e0e0;      /* İnce gri çerçeve */
+}
+
+#image-preview {
+    display: block;                          /* Blok öğe olur */
+    margin: 0 auto 20px auto;                /* Ortalanır ve alt boşluk */
+    max-width: 100%;                         /* Genişlik sınırlı */
+    border-radius: 8px;                      /* Köşeler yuvarlanır */
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.2);       /* Hafif gölge */
+}
+
+.prediction-label {
+    font-size: 20px;         /* Yazı boyutu */
+    font-weight: bold;       /* Kalın */
+    color: #333;             /* Koyu gri yazı */
+    margin-right: 10px;      /* Yan boşluk */
+}
+
+.result-box { /* sonuç kutusu*/
+    display: inline-block;   /* Satır içinde kutu */
+    margin-top: 15px;        /* Üst boşluk */
+    padding: 12px 25px;      /* İç boşluk */
+    background: white;       /* Beyaz arka plan */
+    border-radius: 50px;     /* Yuvarlak kutu */
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+    border: 2px solid #4CAF50;
+}
+
+
+.result-box span { /*sonuç yazısı*/
+    font-size: 22px;         /* Büyük yazı */
+    font-weight: bold;       /* Kalın yazı */
+    color: #4CAF50;          /* Yeşil */
+}
